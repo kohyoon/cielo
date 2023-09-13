@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/gradation">
+
+    <ImageView
+        android:id="@+id/p_background4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentRight="false"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/backwhite" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:text=" " />
+
+            <TextView
+                android:id="@+id/com_nick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:fontFamily="@font/goyangeb"
+                android:text="닉네임" />
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:fontFamily="@font/goyangb"
+                android:text="님" />
+
+            <TextView
+                android:id="@+id/textView22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text=" " />
+
+        <RelativeLayout
+            android:id="@+id/mywrite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground">
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:fontFamily="@font/goyangb"
+                android:text="내가 쓴 글  " />
+
+            <TextView
+                android:id="@+id/com_count"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_toEndOf="@id/textView19"
+                android:layout_weight="1"
+                android:fontFamily="@font/goyangeb"
+                android:text="0" />
+
+            <TextView
+                android:id="@+id/textView25"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:layout_toEndOf="@id/com_count"
+                android:fontFamily="@font/goyangb"
+                android:text="개" />
+        </RelativeLayout>
+
+
+
+            <TextView
+                android:id="@+id/textView23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:text=" " />
+
+            <ImageButton
+                android:id="@+id/submitbut"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+
+
+                android:background="@color/white"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/write_btn"></ImageButton>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageView23"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="3dp"
+            android:src="@drawable/line" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/button"
+                    android:layout_width="370dp"
+                    android:layout_height="280dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/infoback"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="360dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@drawable/backcolor">
+
+                        <TextView
+                            android:id="@+id/hot2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/goyangb"
+                            android:text="게시판"
+                            android:textColor="#F3F3F3"
+                            android:textSize="15sp"></TextView>
+
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:id="@+id/buttons"
+                        android:layout_width="360dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/openfree"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginBottom="2dp"
+                            android:background="@color/white"
+                            android:fontFamily="@font/goyangb"
+                            android:paddingLeft="30dp"
+                            android:text="자유 게시판"
+                            android:textAlignment="textStart"
+                            android:textColor="#7E7D7D"
+                            android:textSize="14sp"></Button>
+
+                        <Button
+                            android:id="@+id/openLove"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginBottom="2dp"
+                            android:background="@color/white"
+                            android:backgroundTint="@color/white"
+                            android:fontFamily="@font/goyangb"
+                            android:paddingStart="30dp"
+                            android:text="연애 게시판"
+                            android:textAlignment="textStart"
+                            android:textColor="#7E7D7D"
+                            android:textSize="14sp"></Button>
+
+                        <Button
+                            android:id="@+id/openFood"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginBottom="2dp"
+                            android:background="@color/white"
+                            android:backgroundTint="@color/white"
+                            android:fontFamily="@font/goyangb"
+                            android:paddingStart="30dp"
+                            android:text="음식 게시판"
+                            android:textAlignment="textStart"
+                            android:textColor="#7E7D7D"
+                            android:textSize="14sp"></Button>
+
+                        <Button
+                            android:id="@+id/openHealth"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginBottom="2dp"
+                            android:background="@color/white"
+                            android:backgroundTint="@color/white"
+                            android:fontFamily="@font/goyangb"
+                            android:paddingStart="30dp"
+                            android:text="건강 게시판"
+                            android:textAlignment="textStart"
+                            android:textColor="#7E7D7D"
+                            android:textSize="14sp"></Button>
+
+                        <Button
+                            android:id="@+id/openSecret"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginBottom="2dp"
+                            android:background="@color/white"
+                            android:backgroundTint="@color/white"
+                            android:fontFamily="@font/goyangb"
+                            android:paddingStart="30dp"
+                            android:text="비밀 게시판"
+                            android:textAlignment="textStart"
+                            android:textColor="#7E7D7D"
+                            android:textSize="14sp"></Button>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/hotframe"
+                    android:layout_width="370dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/infoback"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="360dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@drawable/backcolor">
+
+                        <TextView
+                            android:id="@+id/hot"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/goyangb"
+                            android:text="오늘의 Hot 게시물"
+                            android:textColor="#F3F3F3"
+                            android:textSize="15sp"></TextView>
+
+                    </FrameLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/hotboardview"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginStart="2dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginEnd="2dp"
+                            android:layout_marginBottom="13dp"
+                            android:padding="5dp"></androidx.recyclerview.widget.RecyclerView>
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</FrameLayout>

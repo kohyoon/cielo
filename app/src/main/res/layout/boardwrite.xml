@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center|center_horizontal|center_vertical"
+    android:clickable="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:background="@drawable/backwhite"
+        android:padding="4dp">
+
+        <RelativeLayout
+            android:id="@+id/writinglene"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/writing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14dp"
+                android:background="@color/white"
+                android:fontFamily="@font/goyangb"
+                android:text="글쓰기"
+                android:textSize="20dp"
+
+
+                ></TextView>
+
+            <ImageButton
+                android:id="@+id/before_btn"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="270dp"
+                android:layout_toEndOf="@+id/writing"
+
+                android:background="@color/white"
+                app:srcCompat="@drawable/san2_exit"></ImageButton>>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/writinglene"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/board_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <RadioGroup
+                    android:id="@+id/theme_name_radiobtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/Freecheck"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/grade_selector"
+                        android:button="@color/fui_transparent"
+                        android:padding="5dp"
+                        android:text="Free"
+                        android:textAlignment="center"
+                        android:textColor="@drawable/grade_color"></RadioButton>
+
+                    <RadioButton
+                        android:id="@+id/Lovecheck"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/grade_selector"
+                        android:button="@color/fui_transparent"
+                        android:padding="5dp"
+                        android:text="Love"
+                        android:textAlignment="center"
+                        android:textColor="@drawable/grade_color"></RadioButton>
+
+                    <RadioButton
+                        android:id="@+id/Foodcheck"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/grade_selector"
+                        android:button="@color/fui_transparent"
+                        android:padding="5dp"
+                        android:text="Food"
+                        android:textAlignment="center"
+                        android:textColor="@drawable/grade_color"></RadioButton>
+
+                    <RadioButton
+                        android:id="@+id/Healthcheck"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/grade_selector"
+                        android:button="@color/fui_transparent"
+                        android:padding="5dp"
+                        android:text="Health"
+                        android:textAlignment="center"
+                        android:textColor="@drawable/grade_color"></RadioButton>
+
+                    <RadioButton
+                        android:id="@+id/Secretcheck"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/grade_selector"
+                        android:button="@color/fui_transparent"
+                        android:padding="5dp"
+                        android:text="Secret"
+                        android:textAlignment="center"
+                        android:textColor="@drawable/grade_color"></RadioButton>
+
+                </RadioGroup>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/title_write"
+                    android:layout_width="match_parent"
+                    android:layout_height="22dp"
+
+                    android:background="@color/white"
+                    android:fontFamily="@font/goyangb"
+                    android:hint="제목을 입력하세요" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/line"></ImageView>
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/context_write"
+                android:layout_width="match_parent"
+                android:layout_height="340dp"
+                android:layout_margin="10dp"
+                android:background="@color/white"
+                android:fontFamily="@font/goyangb"
+                android:gravity="top"
+                android:hint="내용을 입력하세요"
+                android:textSize="15dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/context_write">
+
+                <CheckBox
+                    android:id="@+id/ancheck"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="익명으로 작성"></CheckBox>
+
+                <ImageButton
+                    android:id="@+id/submit_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/context_write"
+                    android:layout_marginLeft="160dp"
+                    android:background="@drawable/submit_button"></ImageButton>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#60B2BC"
+    android:orientation="vertical"
+    tools:context=".activity.MainActivity">
+
+    <ImageView
+        android:id="@+id/logo2"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="130dp"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/logo_img" />
+
+    <ImageView
+        android:id="@+id/appName2"
+        android:layout_width="130dp"
+        android:layout_height="45dp"
+        android:layout_below="@id/logo2"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@drawable/app_img" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="150dp"
+        android:layout_height="35dp"
+        android:layout_below="@id/appName2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        app:srcCompat="@drawable/signup_img" />
+
+    <FrameLayout
+        android:id="@+id/emailSign"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/imageView7"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/blank_img">
+
+        <EditText
+            android:id="@+id/emailSignText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@null"
+            android:ems="10"
+            android:fontFamily="@font/goyangb"
+            android:hint="E-mail"
+            android:inputType="textEmailAddress"
+            android:paddingLeft="20dp" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/pwSign"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/emailSign"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/blank_img">
+
+        <EditText
+            android:id="@+id/pwSignText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@null"
+            android:ems="10"
+            android:fontFamily="@font/goyangb"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:paddingLeft="20dp" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/pwCheckSign"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/pwSign"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/blank_img">
+
+        <EditText
+            android:id="@+id/pwCheckSignText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@null"
+            android:ems="10"
+            android:fontFamily="@font/goyangb"
+            android:hint="Password Check"
+            android:inputType="textPassword"
+            android:paddingLeft="20dp" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2" />
+
+    </FrameLayout>
+
+    <ImageButton
+        android:id="@+id/goLogin"
+        android:layout_width="300dp"
+        android:layout_height="45dp"
+        android:layout_below="@id/pwCheckSign"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/transparent"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/start_btn2" />
+
+</RelativeLayout>

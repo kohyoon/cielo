@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   >
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/teal_300"
+
+
+       >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:fontFamily="@font/goyangeb"
+                android:textSize="15dp"
+                android:text="게시글을 삭제하시겠습니까?"></TextView>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:layout_marginBottom="10dp">
+
+                <Button
+                    android:id="@+id/positiveButton"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/positiveButton"
+                    android:layout_toStartOf="@id/positiveButton"
+                    android:text="삭제" />
+
+                <Button
+                    android:id="@+id/negativeButton"
+                    android:layout_width="55dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="취소" />
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+
+</FrameLayout>
+

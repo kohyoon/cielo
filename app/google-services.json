@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "406870011939",
+    "project_id": "cielo-b79c6",
+    "storage_bucket": "cielo-b79c6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:406870011939:android:6289c8fdde54656e5dc196",
+        "android_client_info": {
+          "package_name": "com.example.cielo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "406870011939-nph1mdgu8kkh49l7rskpurii4lb14r6b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAHqrP1mRj0FdgPkcK_Sfsqucki633u96M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "406870011939-nph1mdgu8kkh49l7rskpurii4lb14r6b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

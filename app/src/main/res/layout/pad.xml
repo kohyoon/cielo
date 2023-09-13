@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".activity.MainActivity" >
+
+    <ImageView
+        android:id="@+id/back_gradation"
+        android:layout_width="wrap_content"
+        android:layout_height="490dp"
+        app:srcCompat="@drawable/gradation" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <FrameLayout
+            android:id="@+id/padimage"
+            android:layout_width="270dp"
+            android:layout_height="270dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp">
+
+            <ImageView
+                android:id="@+id/background1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|center_horizontal"
+                android:layout_marginTop="0dp"
+
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/san3_backgroudn" />
+
+            <ImageView
+                android:id="@+id/pad_img"
+                android:layout_width="270dp"
+                android:layout_height="270dp"
+
+                android:layout_gravity="center|center_horizontal"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/san_img" />
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/padimage"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/pad_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/background1"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="@font/goyangb"
+                android:text="좋은느낌 슬림 중형"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/thumbs_up"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_below="@id/background1"
+                android:layout_marginLeft="0dp"
+                android:layout_toRightOf="@id/pad_name"
+                app:srcCompat="@drawable/san3_thumb_upbtn" />
+
+            <ImageView
+                android:id="@+id/bookmark"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_below="@id/background1"
+                android:layout_toRightOf="@id/thumbs_up"
+                app:srcCompat="@drawable/san3_bookmarkbtn" />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <ImageView
+        android:id="@+id/hori_bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/pad_name"
+        android:layout_alignBottom="@id/pad_name"
+        android:layout_alignParentBottom="false"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="20dp"
+        app:srcCompat="@drawable/san3_hori_bar" />
+
+    <ImageView
+        android:id="@+id/table"
+        android:layout_width="313dp"
+        android:layout_height="250dp"
+        android:layout_below="@id/hori_bar"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@drawable/san3_table" />
+
+</FrameLayout>

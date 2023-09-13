@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    app:cnb_unselectedColor="#fff"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/calendar"
+        android:icon="@drawable/nav_calendar"
+        app:cnb_iconColor = "#50606E"
+        app:cnb_backgroundColor = "#CADBE9"
+        app:cnb_textColor = "#50606E"
+        android:title="Calendar" />
+
+    <item
+        android:id="@+id/pad"
+        android:icon="@drawable/nav_pad"
+        app:cnb_iconColor = "#485C30"
+        app:cnb_backgroundColor = "#C5E99B"
+        app:cnb_textColor = "#485C30"
+        android:title="Pad" />
+    <item
+        android:id="@+id/community"
+        android:icon="@drawable/nav_community"
+        app:cnb_iconColor = "#353657"
+        app:cnb_backgroundColor = "#AAABD3"
+        app:cnb_textColor = "#353657"
+        android:title="Community" />
+    <item
+        android:id="@+id/info"
+        android:icon="@drawable/nav_info"
+        app:cnb_iconColor = "#815B5B"
+        app:cnb_backgroundColor = "#fec9c9"
+        app:cnb_textColor = "#815B5B"
+        android:title="Info" />
+
+</menu>

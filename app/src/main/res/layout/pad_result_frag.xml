@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/totalBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="0dp"
+        android:scaleType="centerCrop"
+        app:srcCompat="@android:color/white" />
+    <ImageView
+        android:id="@+id/san2Background3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="0dp"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/gradation" />
+
+    <FrameLayout
+        android:id="@+id/input"
+        android:layout_width="363dp"
+        android:layout_height="65dp"
+        android:layout_centerHorizontal="true">
+
+
+        <ImageView
+            android:id="@+id/searchBar3"
+            android:layout_width="365dp"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/search_win" />
+
+        <ImageButton
+            android:id="@+id/searchicon3"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:layout_marginStart="25sp"
+            android:layout_marginLeft="25sp"
+            android:layout_marginTop="20sp"
+            android:background="#00FFFFFF"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/search" />
+
+        <TextView
+            android:id="@+id/gottenKeyword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@android:color/transparent"
+            android:ems="10"
+            android:fontFamily="@font/goyangb"
+            android:gravity="center_vertical"
+            android:hint="검색결과"
+            android:inputType="textPersonName"
+            android:textColor="#757474"
+            android:textSize="18sp" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/sorting"
+        android:layout_width="365dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/input"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-20dp">
+
+        <ImageView
+            android:id="@+id/imageView16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/sorting" />
+
+        <RadioGroup
+            android:id="@+id/options"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/byrecommend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/goyangb"
+                android:button="@color/fui_transparent"
+                android:background="@drawable/radio_selector"
+                android:textColor="@drawable/text_color"
+                android:elevation="4dp"
+                android:padding="6dp"
+                android:checked="true"
+                android:text="추천랭킹순" />
+
+            <RadioButton
+                android:id="@+id/byminprice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="40dp"
+                android:background="@drawable/radio_selector"
+                android:button="@color/fui_transparent"
+                android:elevation="4dp"
+                android:fontFamily="@font/goyangb"
+                android:padding="6dp"
+                android:text="낮은가격순"
+                android:textColor="@drawable/text_color" />
+
+            <RadioButton
+                android:id="@+id/bymaxprice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/radio_selector"
+                android:button="@color/fui_transparent"
+                android:elevation="4dp"
+                android:fontFamily="@font/goyangb"
+                android:padding="6dp"
+                android:text="높은가격순"
+                android:textColor="@drawable/text_color" />
+        </RadioGroup>
+
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/background3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/input"
+        android:layout_alignStart="@id/input"
+        android:layout_alignEnd="@id/input"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-5dp"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/san12_background" />
+
+    <androidx.recyclerview.widget.RecyclerView
+
+        android:id="@+id/recyclerView3"
+
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sorting"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-13dp" />
+</RelativeLayout>

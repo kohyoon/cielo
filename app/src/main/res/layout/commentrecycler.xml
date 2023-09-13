@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        app:srcCompat="@drawable/commentbackground" />
+
+    <RelativeLayout
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|center_vertical"
+        android:layout_marginTop="7dp">
+
+        <FrameLayout
+            android:id="@+id/profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp">
+
+            <ImageView
+                android:id="@+id/profile_image"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:src="@drawable/profiledefault" />
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/userinfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="2dp"
+            android:layout_toRightOf="@id/profile"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/info_nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/goyangeb"
+                android:text="닉네임"
+                android:textColor="#919191"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/info_comma"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/goyangeb"
+                android:text=", "
+                android:textColor="#919191"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/info_roughAge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/goyangeb"
+                android:text="나이"
+                android:textColor="#919191"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/info_comma2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/goyangeb"
+                android:text="대, "
+                android:textColor="#919191"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/info_blood"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/goyangeb"
+                android:text="생리양"
+                android:textColor="#919191"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/line4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/userinfo"
+            android:layout_centerVertical="false"
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="30dp"
+            android:layout_toRightOf="@id/profile"
+            app:srcCompat="@drawable/line" />
+
+        <TextView
+            android:id="@+id/comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line4"
+            android:layout_centerHorizontal="false"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="10dp"
+            android:layout_toRightOf="@id/profile"
+            android:hint="상품평을 남겨주세요 (40자이내)"
+            android:lines="2"
+            android:maxLength="40"
+            android:maxLines="2"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+
+</FrameLayout>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="350dp"
+        android:layout_height="130dp"
+        android:layout_gravity="center"
+        app:srcCompat="@drawable/items" />
+
+    <RelativeLayout
+        android:layout_width="350dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center|center_vertical">
+
+        <ImageView
+            android:id="@+id/secondpic"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dp"
+            app:srcCompat="@drawable/san_img" />
+
+        <TextView
+            android:id="@+id/secondname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="false"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="5dp"
+            android:layout_toRightOf="@id/secondpic"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/goyangb"
+            android:gravity="center_horizontal"
+            android:inputType="textMultiLine"
+            android:lines="2"
+            android:text="생리대이름"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/secondname"
+            android:layout_alignRight="@id/secondname"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@id/secondpic"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="18dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="2dp"
+                android:layout_weight="0.8"
+                android:background="@color/fui_transparent"
+                app:srcCompat="@drawable/won" />
+
+            <TextView
+                android:id="@+id/secondprice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/goyangb"
+                android:gravity="center_vertical"
+                android:text="가격"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/blank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="4" />
+
+            <ImageView
+                android:id="@+id/secondgoodbutton"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="0dp"
+                app:srcCompat="@drawable/heart" />
+
+            <TextView
+                android:id="@+id/secondgood"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/goyangb"
+                android:gravity="center_vertical"
+                android:text="추천수"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</FrameLayout>

@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:layout_gravity="center|center_horizontal|center_vertical"
+
+    android:background="@drawable/cielobackground"
+    tools:context=".activity.MainActivity">
+
+
+    <ImageView
+        android:id="@+id/p_background"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentRight="false"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/white_background" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <FrameLayout
+                    android:id="@+id/user_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/imageView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="250dp"
+                        android:layout_gravity="right|center_horizontal"
+                        android:layout_marginStart="13dp"
+                        android:layout_marginEnd="13dp"
+                        android:scaleType="fitXY"
+                        app:srcCompat="@drawable/infogreenback" />
+
+                    <RelativeLayout
+                        android:id="@+id/user_p"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal">
+
+                        <RelativeLayout
+                            android:id="@+id/profile_frame"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="50dp">
+
+                            <ImageView
+                                android:id="@+id/profileImage"
+                                android:layout_width="150dp"
+                                android:layout_height="150dp"
+                                android:layout_centerHorizontal="true" />
+
+                            <FrameLayout
+                                android:id="@+id/nickframe"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/profileImage"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="-10dp"
+                                android:background="@drawable/nickname_rectangle">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="30dp"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:id="@+id/imageView24"
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_marginStart="20dp"
+                                        android:layout_weight="0.1"
+                                        app:srcCompat="@drawable/greenlogo" />
+
+                                    <TextView
+                                        android:id="@+id/nickname"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal|center_vertical"
+                                        android:layout_marginStart="10dp"
+                                        android:layout_marginEnd="15dp"
+                                        android:layout_weight="0.9"
+                                        android:background="@android:color/transparent"
+                                        android:fontFamily="@font/goyangb"
+                                        android:gravity="center"
+                                        android:inputType="textPersonName"
+                                        android:text="닉네임"
+                                        android:textAlignment="textStart" />
+                                </LinearLayout>
+
+                            </FrameLayout>
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="25dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/imageView4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/infobell" />
+
+                        <Switch
+                            android:id="@+id/push_switch"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="right|top|center_vertical"
+                            android:cursorVisible="true" />
+                    </LinearLayout>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/infos"
+                    android:layout_width="350dp"
+                    android:layout_height="200dp"
+                    android:layout_below="@id/user_profile"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/infoback">
+
+                    <LinearLayout
+                        android:id="@+id/infoframe"
+                        android:layout_width="230dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/profiename"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal|center_vertical"
+                                android:fontFamily="@font/goyangb"
+                                android:text="이름"
+                                android:textColor="#434343" />
+
+                            <EditText
+                                android:id="@+id/username"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:fontFamily="@font/goyangb"
+                                android:inputType="textPersonName"
+                                android:text="김수현"
+                                android:textAlignment="textEnd"
+                                android:textSize="15sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/birthday"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal|center_vertical"
+                                android:fontFamily="@font/goyangb"
+                                android:text="나이"
+                                android:textColor="#434343" />
+
+                            <EditText
+                                android:id="@+id/birthdate"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:fontFamily="@font/goyangb"
+                                android:inputType="date"
+                                android:text="23세"
+                                android:textAlignment="textEnd"
+                                android:textSize="15sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/name5"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/goyangb"
+                                    android:text="나의 매너온도"
+                                    android:textColor="#434343" />
+
+                                <TextView
+                                    android:id="@+id/manner_temp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:fontFamily="@font/goyangb"
+                                    android:text="30°C"
+                                    android:textAlignment="textEnd"
+                                    android:textAllCaps="false"
+                                    android:textColor="#000000"
+                                    android:textSize="15sp" />
+
+                            </LinearLayout>
+
+                            <ProgressBar
+                                android:id="@+id/progress_manner"
+                                style="?android:attr/progressBarStyleHorizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="3dp"
+                                android:max="100" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="350dp"
+                    android:layout_height="150dp"
+                    android:layout_below="@id/infos"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/infoback">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/write_manage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="7dp"
+                            android:fontFamily="@font/goyangeb"
+                            android:text="ACTIVITY"
+                            android:textSize="18sp" />
+
+                        <LinearLayout
+                            android:id="@+id/board_menu"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="7dp"
+                            android:orientation="horizontal">
+
+                            <FrameLayout
+                                android:layout_width="90dp"
+                                android:layout_height="90dp"
+                                android:layout_marginEnd="20dp">
+
+                                <Button
+                                    android:id="@+id/mywriting"
+                                    android:layout_width="90dp"
+                                    android:layout_height="90dp"
+                                    android:backgroundTint="#FFFFFF" />
+
+                                <ImageView
+                                    android:id="@+id/img3"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_weight="1"
+                                    android:elevation="5dp"
+                                    app:srcCompat="@drawable/bar_chart" />
+
+                                <TextView
+                                    android:id="@+id/name7"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="bottom|center_horizontal"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginBottom="8dp"
+                                    android:elevation="5dp"
+                                    android:fontFamily="@font/goyangb"
+                                    android:gravity="center_horizontal"
+                                    android:text="생리기간" />
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="90dp"
+                                android:layout_height="90dp">
+
+                                <Button
+                                    android:id="@+id/myscrap"
+                                    android:layout_width="90dp"
+                                    android:layout_height="90dp"
+                                    android:backgroundTint="#FFFFFF" />
+
+                                <ImageView
+                                    android:id="@+id/img"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_weight="1"
+                                    android:elevation="5dp"
+                                    app:srcCompat="@drawable/shopping_cart" />
+
+                                <TextView
+                                    android:id="@+id/name8"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="bottom|center_horizontal"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginBottom="8dp"
+                                    android:elevation="5dp"
+                                    android:fontFamily="@font/goyangb"
+                                    android:gravity="center_horizontal"
+                                    android:text="스크랩 박스" />
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="90dp"
+                                android:layout_height="90dp"
+                                android:layout_marginStart="20dp">
+
+                                <Button
+                                    android:id="@+id/myscrapp"
+                                    android:layout_width="90dp"
+                                    android:layout_height="90dp"
+                                    android:backgroundTint="#FFFFFF" />
+
+                                <ImageView
+                                    android:id="@+id/img2"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginStart="4dp"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_weight="1"
+                                    android:elevation="5dp"
+                                    app:srcCompat="@drawable/note_book" />
+
+                                <TextView
+                                    android:id="@+id/name9"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="bottom|center_horizontal"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginBottom="8dp"
+                                    android:elevation="5dp"
+                                    android:fontFamily="@font/goyangb"
+                                    android:gravity="center_horizontal"
+                                    android:text="내 게시물" />
+                            </FrameLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </FrameLayout>
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

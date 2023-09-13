@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerInParent="false"
+    android:layout_centerHorizontal="false"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/searchBackground2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/san2_background" />
+
+    <ImageView
+        android:id="@+id/exitButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/searchBackground"
+        android:layout_alignRight="@id/searchBackground2"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:padding="5dp"
+        app:srcCompat="@drawable/san2_exit" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="545dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/p_pad_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="70dp"
+            android:fontFamily="@font/goyangeb"
+            android:maxWidth="300dp"
+            android:text="생리대이름"
+            android:textSize="16sp" />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="12dp">
+
+            <ImageView
+                android:id="@+id/imageView17"
+                android:layout_width="350dp"
+                android:layout_height="58dp"
+                android:layout_marginTop="7dp"
+                app:srcCompat="@drawable/san3_total_ingre" />
+
+            <TextView
+                android:id="@+id/ingre_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="30dp"
+                android:fontFamily="@font/goyangeb"
+                android:text="N"
+                android:textSize="12sp" />
+        </FrameLayout>
+
+
+        <RadioGroup
+            android:id="@+id/gradegroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/all"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/ingre_selector"
+                android:button="@android:color/transparent"
+                android:checked="true"
+                android:fontFamily="@font/goyangb"
+                android:padding="5dp"
+                android:text="전체"
+                android:textAlignment="center"
+                android:textColor="@drawable/ingre_color"
+                android:textSize="12sp" />
+
+            <RadioButton
+                android:id="@+id/cover_btn"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/ingre_selector"
+                android:button="@android:color/transparent"
+                android:fontFamily="@font/goyangb"
+                android:padding="5dp"
+                android:text="표지"
+                android:textAlignment="center"
+                android:textColor="@drawable/ingre_color"
+                android:textSize="12sp" />
+
+            <RadioButton
+                android:id="@+id/side_btn"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/ingre_selector"
+                android:button="@android:color/transparent"
+                android:fontFamily="@font/goyangb"
+                android:padding="5dp"
+                android:text="사이드"
+                android:textAlignment="center"
+                android:textColor="@drawable/ingre_color"
+                android:textSize="12sp" />
+
+            <RadioButton
+                android:id="@+id/absorber_btn"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/ingre_selector"
+                android:button="@android:color/transparent"
+                android:fontFamily="@font/goyangb"
+                android:padding="5dp"
+                android:text="흡수체"
+                android:textAlignment="center"
+                android:textColor="@drawable/ingre_color"
+                android:textSize="12sp" />
+
+            <RadioButton
+                android:id="@+id/adhesive_btn"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/ingre_selector"
+                android:button="@android:color/transparent"
+                android:fontFamily="@font/goyangb"
+                android:padding="5dp"
+                android:text="접착제"
+                android:textAlignment="center"
+                android:textColor="@drawable/ingre_color"
+                android:textSize="12sp" />
+
+            <RadioButton
+                android:id="@+id/water_btn"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/ingre_selector"
+                android:button="@android:color/transparent"
+                android:fontFamily="@font/goyangb"
+                android:padding="5dp"
+                android:text="방수체"
+                android:textAlignment="center"
+                android:textColor="@drawable/ingre_color"
+                android:textSize="12sp" />
+        </RadioGroup>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/ingrecycler1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+    </LinearLayout>
+</RelativeLayout>

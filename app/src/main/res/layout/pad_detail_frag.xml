@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/san2Background2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="0dp"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/gradation" />
+
+    <ImageView
+        android:id="@+id/background2"
+        android:layout_width="363dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="20dp"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/san12_background" />
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="365dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/commentLayout"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+
+        <LinearLayout
+            android:id="@+id/scrollList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/padInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_marginTop="30dp">
+
+                <!--
+                <ImageView
+                    android:id="@+id/background5"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/pad_image_rectangle" />
+                    -->
+
+                <ImageView
+                    android:id="@+id/imageView13"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/san_img" />
+
+                <ImageButton
+                    android:id="@+id/recommend_btn"
+                    android:layout_width="29dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="bottom|end"
+                    android:layout_marginRight="65dp"
+                    android:background="@null"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/recommend" />
+
+                <ImageButton
+                    android:id="@+id/scrap_btn"
+                    android:layout_width="29dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="bottom|right"
+                    android:layout_marginRight="35dp"
+                    android:background="@null"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/san3_bookmarkbtn" />
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|end"
+                    android:layout_marginEnd="100dp">
+
+                    <ImageView
+                        android:id="@+id/background4"
+                        android:layout_width="70dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/pad_length_rectangle" />
+
+                    <TextView
+                        android:id="@+id/textView7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/goyangeb"
+                        android:text="길이cm"
+                        android:textSize="14sp" />
+                </FrameLayout>
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/padName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/goyangeb"
+                android:inputType="textMultiLine"
+                android:maxWidth="280dp"
+                android:maxLines="2"
+                android:text="생리대이름"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/line2"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                app:srcCompat="@drawable/line" />
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
+
+                <Button
+                    android:id="@+id/viewingre"
+                    android:layout_width="320dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#FFFFFF"
+                    android:ellipsize="none"
+                    android:fontFamily="@font/goyangb"
+                    android:text="위험등급 성분 N개"
+                    android:textAlignment="viewStart"
+                    android:textColor="#6E6D6D" />
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginEnd="10dp"
+                    android:elevation="5dp"
+                    android:fontFamily="@font/goyangeb"
+                    android:text=">"
+                    android:textColor="#A8A8A8"
+                    android:textSize="20sp" />
+            </FrameLayout>
+
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/swiperefreshlayout"
+                android:layout_width="match_parent"
+                android:layout_height="250dp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/commentRecycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/commentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true">
+
+        <ImageView
+            android:id="@+id/background7"
+            android:layout_width="360dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            app:srcCompat="@drawable/pad_comment_rectangle" />
+
+        <LinearLayout
+            android:layout_width="340dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/review"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="10dp"
+                android:layout_weight="0.8"
+                android:background="@color/fui_transparent"
+                android:ems="10"
+                android:fontFamily="@font/goyangb"
+                android:hint="comment를 입력해주세요 (40자이내)"
+                android:includeFontPadding="false"
+                android:inputType="textPersonName"
+                android:maxLength="40"
+                android:textSize="13sp" />
+
+            <ImageView
+                android:id="@+id/reviewSend"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.2"
+                app:srcCompat="@drawable/commend_send" />
+        </LinearLayout>
+    </FrameLayout>
+
+</RelativeLayout>

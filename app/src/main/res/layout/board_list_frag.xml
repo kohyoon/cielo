@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/cielobackground"
+
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:backgroundTint="@color/white"
+        >
+
+        <RelativeLayout
+            android:id="@+id/linear"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/backcolor">
+
+            <TextView
+                android:id="@+id/themename"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/goyangb"
+                android:text="theme이름"
+                android:textColor="@color/white"
+                android:textSize="20dp"></TextView>
+
+        </RelativeLayout>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swiperefreshlayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/write_btn"
+            android:layout_below="@id/linear">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/blistview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/write_btn"
+                android:layout_below="@id/linear"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:background="@drawable/rounded3"></androidx.recyclerview.widget.RecyclerView>
+
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+
+        <ImageButton
+            android:id="@+id/write_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@id/linear"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="false"
+
+
+            android:background="@color/white"
+            android:src="@drawable/write_btn"></ImageButton>
+
+
+    </RelativeLayout>
+
+
+</FrameLayout>
+
